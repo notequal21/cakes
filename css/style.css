@@ -471,11 +471,11 @@ body {
 }
 
 .main-body__advantages-item:nth-child(1) {
-  background-image: url(/img/main/ico01.png);
+  background-image: url(../img/main/ico01.png);
 }
 
 .main-body__advantages-item:nth-child(2) {
-  background-image: url(/img/main/ico02.png);
+  background-image: url(../img/main/ico02.png);
 }
 
 .main-body__image {
@@ -681,7 +681,7 @@ body {
 }
 
 .cakes-clmn__item-link a:after {
-  content: url(/img/icons/arrow.png);
+  content: url(../img/icons/arrow.png);
 }
 
 .cakes-clmn__item-link a:hover:before {
@@ -723,7 +723,7 @@ body {
 
 .order-row:nth-child(3):before,
 .order-row:nth-child(3):after {
-  content: url(/img/order/hanging.png);
+  content: url(../img/order/hanging.png);
   position: absolute;
   bottom: -148px;
 }
@@ -1632,7 +1632,7 @@ body {
 .howorder {
   height: 703px;
   background-color: #e0323d;
-  background-image: url(/img/howorder/bg.png);
+  background-image: url(../img/howorder/bg.png);
   background-repeat: no-repeat;
 }
 
@@ -3233,8 +3233,8 @@ body {
   }
 }
 
-.webp .main-body__advantages-item:nth-child(1){ background-image: url(/img/main/ico01.webp); }
+.webp .main-body__advantages-item:nth-child(1){ background-image: url(../img/main/ico01.webp); }
 
-.webp .main-body__advantages-item:nth-child(2){ background-image: url(/img/main/ico02.webp); }
+.webp .main-body__advantages-item:nth-child(2){ background-image: url(../img/main/ico02.webp); }
 
-.webp .howorder{ background-image: url(/img/howorder/bg.webp); }
+.webp .howorder{ background-image: url(../img/howorder/bg.webp); }
