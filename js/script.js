@@ -199,7 +199,107 @@ for (let anchor of anchors) {
 })
 }
 
+if (document.documentElement.clientWidth > 1000) { // disable script if resolution less than 1000px 
 
+  let bg = document.querySelector('.kanuvoye-pomesucud-image');
+  window.addEventListener('mousemove', function(e) {
+      let x = e.clientX / window.innerWidth;
+      let y = e.clientY / window.innerHeight;  
+    bg.style.transform = 'translate(-' + x * 14 + 'px, -' + y * 14 + 'px)';
+  });
+
+  let bg02 = document.querySelector('.kanuvoye-pomesucud-bgicon01');
+  window.addEventListener('mousemove', function(e) {
+      let x = e.clientX / window.innerWidth;
+      let y = e.clientY / window.innerHeight;  
+    bg02.style.transform = 'translate(-' + x * 8 + 'px, +' + y * 8 + 'px)';
+  });
+
+  let bg03 = document.querySelector('.kanuvoye-pomesucud-bgicon02');
+  window.addEventListener('mousemove', function(e) {
+      let x = e.clientX / window.innerWidth;
+      let y = e.clientY / window.innerHeight;  
+    bg03.style.transform = 'translate(+' + x * 8 + 'px, -' + y * 8 + 'px)';
+  });
+
+  let bg04 = document.querySelector('.kanuvoye-pomesucud-bgicon03');
+  window.addEventListener('mousemove', function(e) {
+      let x = e.clientX / window.innerWidth;
+      let y = e.clientY / window.innerHeight;  
+    bg04.style.transform = 'translate(+' + x * 8 + 'px, +' + y * 8 + 'px)';
+  });
+
+  let bg05 = document.querySelector('.kanuvoye-pomesucud-bgicon04');
+  window.addEventListener('mousemove', function(e) {
+      let x = e.clientX / window.innerWidth;
+      let y = e.clientY / window.innerHeight;  
+    bg05.style.transform = 'translate(+' + x * 8 + 'px, +' + y * 8 + 'px)';
+  });
+
+  let bg06 = document.querySelector('.kanuvoye-pomesucud-bgicon05');
+  window.addEventListener('mousemove', function(e) {
+      let x = e.clientX / window.innerWidth;
+      let y = e.clientY / window.innerHeight;  
+    bg06.style.transform = 'translate(-' + x * 8 + 'px, +' + y * 8 + 'px)';
+  });
+
+  let bg07 = document.querySelector('.kanuvoye-pomesucud-bgicon06');
+  window.addEventListener('mousemove', function(e) {
+      let x = e.clientX / window.innerWidth;
+      let y = e.clientY / window.innerHeight;  
+    bg07.style.transform = 'translate(-' + x * 12 + 'px, +' + y * 6 + 'px)';
+  });
+
+  let bg08 = document.querySelector('.kanuvoye-pomesucud-bgicon07');
+  window.addEventListener('mousemove', function(e) {
+      let x = e.clientX / window.innerWidth;
+      let y = e.clientY / window.innerHeight;  
+    bg08.style.transform = 'translate(+' + x * 6 + 'px, +' + y * 12 + 'px)';
+  });
+
+  let bg09 = document.querySelector('.kanuvoye-pomesucud-bgicon08');
+  window.addEventListener('mousemove', function(e) {
+      let x = e.clientX / window.innerWidth;
+      let y = e.clientY / window.innerHeight;  
+    bg09.style.transform = 'translate(+' + x * 12 + 'px, +' + y * 6 + 'px)';
+  });
+
+  let bg10 = document.querySelector('.kanuvoye-pomesucud-bgicon09');
+  window.addEventListener('mousemove', function(e) {
+      let x = e.clientX / window.innerWidth;
+      let y = e.clientY / window.innerHeight;  
+    bg10.style.transform = 'translate(-' + x * 14 + 'px, -' + y * 8 + 'px)';
+  });
+
+  let bg11 = document.querySelector('.kanuvoye-pomesucud-bgicon10');
+  window.addEventListener('mousemove', function(e) {
+      let x = e.clientX / window.innerWidth;
+      let y = e.clientY / window.innerHeight;  
+    bg11.style.transform = 'translate(-' + x * 8 + 'px, -' + y * 6 + 'px)';
+  });
+
+  let bg12 = document.querySelector('.kanuvoye-pomesucud-bgicon11');
+  window.addEventListener('mousemove', function(e) {
+      let x = e.clientX / window.innerWidth;
+      let y = e.clientY / window.innerHeight;  
+    bg12.style.transform = 'translate(+' + x * 8 + 'px, -' + y * 12 + 'px)';
+  });
+
+  let bg13 = document.querySelector('.kanuvoye-pomesucud-bgicon12');
+  window.addEventListener('mousemove', function(e) {
+      let x = e.clientX / window.innerWidth;
+      let y = e.clientY / window.innerHeight;  
+    bg13.style.transform = 'translate(-' + x * 8 + 'px, +' + y * 12 + 'px)';
+  });
+
+  let bg14 = document.querySelector('.kanuvoye-pomesucud-bgicon13');
+  window.addEventListener('mousemove', function(e) {
+      let x = e.clientX / window.innerWidth;
+      let y = e.clientY / window.innerHeight;  
+    bg14.style.transform = 'translate(-' + x * 8 + 'px, +' + y * 12 + 'px)';
+  });
+
+}
 
 
 function testWebP(callback) {
