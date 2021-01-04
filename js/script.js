@@ -163,11 +163,11 @@ $(document).ready(function(){
         mobileFirst:true,
         responsive: [
             {
-                breakpoint: 769,
+                breakpoint: 767,
                     settings:"unslick",
             },
             {
-                breakpoint: 768,
+                breakpoint: 766,
                     settings: {
                         rows:1,
                         slidesToShow: 1,
@@ -185,39 +185,54 @@ $(document).ready(function(){
         $(this).toggleClass('active').next().slideToggle(300)
     }); 
 });
-$(document).ready(function(){
-    // ------------  HZ 4e 3to --------
-    // $("#menu").on("click","a", function (event) {
-    //     event.preventDefault();
-    //     var id  = $(this).attr('href'),
-    //         top = $(id).offset().top;
-    //     $('body,html').animate({scrollTop: top}, 700);
-    // });
-    // --------------------------------
 
-    $(".yak").on("click","a", function (event) {
-        event.preventDefault();
-        var id  = $(this).attr('href'),
-            top = $(id).offset().top;
-        $('body,html').animate({scrollTop: top}, 300);
-    });
-    $("#buttonUp").on("click","a", function (event) {
-        event.preventDefault();
-        var id  = $(this).attr('href'),
-            top = $(id).offset().top;
-        $('body,html').animate({scrollTop: top}, 500);
-    });
-    $(window).scroll(function() {
-        // если пользователь прокрутил страницу более чем на 200px
-        if ($(this).scrollTop()>200) {
-            // то сделать кнопку scrollup видимой
-        $('#buttonUp').fadeIn();
+function scrollTo(to, duration = 700) {
+    const
+        element = document.scrollingElement || document.documentElement,
+        start = element.scrollTop,
+        change = to - start,
+        startDate = +new Date(),
+        // t = current time
+        // b = start value
+        // c = change in value
+        // d = duration
+        easeInOutQuad = function (t, b, c, d) {
+            t /= d / 2;
+            if (t < 1) return c / 2 * t * t + b;
+            t--;
+            return -c / 2 * (t * (t - 2) - 1) + b;
+        },
+        animateScroll = function () {
+            const currentDate = +new Date();
+            const currentTime = currentDate - startDate;
+            element.scrollTop = parseInt(easeInOutQuad(currentTime, start, change, duration));
+            if (currentTime < duration) {
+                requestAnimationFrame(animateScroll);
+            }
+            else {
+                element.scrollTop = to;
+            }
+        };
+    animateScroll();
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    let btn = document.querySelector('#toTop');
+    window.addEventListener('scroll', function () {
+        // Если прокрутили дальше 599px, показываем кнопку
+        if (pageYOffset > 100) {
+            btn.classList.add('show');
+            // Иначе прячем
+        } else {
+            btn.classList.remove('show');
         }
-        // иначе скрыть кнопку scrollup
-        else {
-        $('#buttonUp').fadeOut();
-        }
     });
+
+    // При клике прокручиываем на самый верх
+    btn.onclick = function (click) {
+        click.preventDefault();
+        scrollTo(0, 400);
+    }
 });
 /*================================================================================
  * @name: bPopup - if you can't get it up, use bPopup
@@ -411,6 +426,21 @@ if (document.documentElement.clientWidth > 1000) { // disable script if resoluti
   });
 
 }
+const anchors = document.querySelectorAll('a[href*="#"]')
+
+for (let anchor of anchors) {
+    anchor.addEventListener('click', function (e) {
+    e.preventDefault()
+    
+    const blockID = anchor.getAttribute('href').substr(1)
+    
+    document.getElementById(blockID).scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+    })
+})
+}
+
 
 
 
